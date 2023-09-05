@@ -138,6 +138,12 @@
     </div>
 </div>
 <!-- ----------contact------------- -->
+
+
+</div>
+
+
+
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -145,72 +151,12 @@
                 <h1 class="sub-title">Contact Me</h1>
                 <p><i class="fas fa-paper-plane"></i> BhashiYasam@Gmail.com</p>
                 <p><i class="fas fa-phone-square-alt"></i> 614-687-6959</p>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright © Bhashi</p>
-    </div>
-</div>
+                <!DOCTYPE html>
+                <html>
+                <body>
+                    <div>
+                        <!-- Paste the Google Form embed code here -->
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdD23G_XE1vYmY-ef_uq5q46iGnIM1iVh0DykSa8JR2t8dhBg/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
 
-
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-
-    var sidemeu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemeu.style.right = "0";
-    }
-    function closemenu(){
-        sidemeu.style.right = "-200px";
-    }
-
-</script>
-<script>
-    const scriptURL = 'https://docs.google.com/spreadsheets/d/1k_V-V7Ua4W1QYgxPRE8pWMuCZ2Z3kUfImbaxecW7EH0/edit?usp=sharing' 
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
 </body>
-</html>
